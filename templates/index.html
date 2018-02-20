@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  
+   <div class="outer-container">
+      <div class="outer-square"></div>
+       <div class="main-container">
+           <div class="inner-container">
+              <div class="content-wrapper"></div>
+               <div class="main" id="fullpage">
+                   <div class="fullpage-content-wrapper section active" id="section0">
+                      <div class="content">
+                            <p class="date">monday 22 january ufo</p>
+                            <p class="header">Charles <br>in New york city</p>
+                            <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus a, architecto, molestias nobis natus laboriosam veritatis sed aut. Magni esse maximet accusantium?</p>
+                       </div>
+                       <div class="fragments-wrapper">
+                           <div class="main-image-holder">
+                               <div class="rotated-image">
+                                   <img src="{% static 'images/pic-1.jpg' %}" alt="main-city">
+                               </div>
+                           </div>
+                               <div class="image-fragment-holder" id="fragment-image-1">
+                                   <div class="fragment-rotated">
+                                       <img src="{% static 'images/pic-2.jpg' %}" alt="city-1">
+                                   </div>
+                               </div>
+                               <div class="image-fragment-holder" id="fragment-image-2">
+                                   <div class="fragment-rotated">
+                                       <img src="{% static 'images/pic-3.jpg' %}" alt="city-2">
+                                   </div>
+                               </div>
+                               <div class="image-fragment-holder" id="fragment-image-3">
+                                   <div class="fragment-rotated">
+                                       <img src="{% static 'images/pic-4.jpg' %}" alt="city-3">
+                                   </div>
+                               </div>
+                       </div>
+                   </div>
+                   <div class="fullpage-content-wrapper section" id="section1">
+                           <div class="content">
+                              <p class="date">Wednesday 22 Febrauary ufo</p>
+                               <p class="header">British <br>in New jessica city</p>
+                               <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus a, architecto, molestias nobis natus laboriosam veritatis sed aut. Magni esse maximet accusantium?</p>
+                           </div>
+                       <div class="fragments-wrapper">
+                           <div class="main-image-holder">
+                               <div class="rotated-image">
+                                   <img src="{% static 'images/pic-6.jpg' %}" alt="main-city">
+                               </div>
+                           </div>
+                           <div class="image-fragment-holder" id="fragment-image-4">
+                               <div class="fragment-rotated">
+                                   <img src="{% static 'images/pic-3.jpg' %}" alt="city-4">
+                               </div>
+                           </div>
+                           <div class="image-fragment-holder" id="fragment-image-5">
+                               <div class="fragment-rotated">
+                                   <img src="{% static 'images/pic-5.jpg' %}" alt="city-5">
+                               </div>
+                           </div>
+                           <div class="image-fragment-holder" id="fragment-image-6">
+                               <div class="fragment-rotated">
+                                   <img src="{% static 'images/pic-1.jpg' %}" alt="city-6">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'node_modules/fullpage.js/vendors/jquery.easings.min.js' %}"></script>
+    <script src="{% static 'node_modules/fullpage.js/vendors/scrolloverflow.min.js' %}"></script>
+    <script src="{% static 'node_modules/fullpage.js/dist/jquery.fullPage.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+	       $('#fullpage').fullpage({
+               scrollingSpeed: 400,
+               autoScrolling: true,
+		       fitToSection: true,
+           });
+        });
+    </script>
+</body>
+</html>

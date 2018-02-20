@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.outer-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: #eff7f7; }
+
+.outer-square {
+  position: absolute;
+  display: inline-block;
+  right: -10%;
+  top: 0;
+  width: 700px;
+  height: 700px;
+  background-color: white;
+  transform: rotate(-45deg); }
+
+.main-container {
+  width: 90%;
+  display: flex;
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
+  min-height: 90vh;
+  background-color: white;
+  box-shadow: 0px 85px 150px -60px dimgrey;
+  overflow: hidden; }
+  .main-container .inner-container {
+    margin: 0 auto;
+    align-self: center;
+    height: 45vh;
+    padding: 40px 0;
+    width: 75%;
+    border: 2px solid #bcbcbc; }
+  .main-container .content {
+    position: absolute;
+    opacity: 0;
+    left: -80px;
+    width: 50%;
+    top: -45%; }
+    .main-container .content .date {
+      padding: 10px 0;
+      text-transform: capitalize; }
+    .main-container .content .para {
+      padding: 30px 0;
+      width: 58%; }
+    .main-container .content .header {
+      font-size: 45px;
+      font-weight: bold; }
+
+.content-wrapper {
+  position: relative;
+  left: -80px;
+  background-color: white;
+  width: 50%;
+  height: 45vh; }
+
+#fragment-image-1 {
+  bottom: 150%;
+  right: 58%;
+  filter: blur(0.9px); }
+
+#fragment-image-2 {
+  bottom: 150%;
+  left: 0;
+  filter: blur(1.5px); }
+
+#fragment-image-3 {
+  filter: blur(0.8px);
+  right: 90%;
+  bottom: 150%; }
+
+#fragment-image-4 {
+  filter: blur(1.5px);
+  top: 150%;
+  left: -4%; }
+
+#fragment-image-5 {
+  filter: blur(0.9px);
+  top: 150%;
+  right: 94%; }
+
+#fragment-image-6 {
+  filter: blur(0.8px);
+  top: 150%;
+  right: 56%; }
+
+.fragments-wrapper {
+  position: relative;
+  left: 55%;
+  top: -50%; }
+
+.fullpage-content-wrapper {
+  position: relative; }
+
+.image-fragment-holder {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  overflow: hidden; }
+
+.fragment-rotated {
+  position: absolute;
+  width: 142%;
+  left: -23px;
+  height: 142%;
+  top: -24px;
+  transform: rotate(-45deg); }
+  .fragment-rotated img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.main-image-holder {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  transform: rotate(45deg);
+  overflow: hidden; }
+  .main-image-holder .rotated-image {
+    position: absolute;
+    width: 142%;
+    left: -82px;
+    height: 142%;
+    top: -68px;
+    transform: rotate(-45deg); }
+    .main-image-holder .rotated-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+.active .content {
+  animation: 4s content-animate forwards; }
+.active .main-image-holder {
+  animation: 500ms main_image_animae ease; }
+.active .fragments-wrapper #fragment-image-1 {
+  animation: 500ms fragments_animate_1 forwards; }
+.active .fragments-wrapper #fragment-image-2 {
+  animation: 500ms fragments_animate_2 forwards; }
+.active .fragments-wrapper #fragment-image-3 {
+  animation: 500ms fragments_animate_3 forwards; }
+.active .fragments-wrapper #fragment-image-4 {
+  animation: 500ms fragments_animate_4 forwards; }
+.active .fragments-wrapper #fragment-image-5 {
+  animation: 500ms fragments_animate_5 forwards; }
+.active .fragments-wrapper #fragment-image-6 {
+  animation: 500ms fragments_animate_6 forwards; }
+
+@keyframes fragments_animate_6 {
+  0% {
+    top: 150%; }
+  100% {
+    top: 97%; } }
+@keyframes fragments_animate_5 {
+  0% {
+    top: 150%; }
+  100% {
+    top: 85%; } }
+@keyframes fragments_animate_4 {
+  0% {
+    top: 150%; }
+  100% {
+    top: -14%; } }
+@keyframes fragments_animate_3 {
+  0% {
+    bottom: 150%; }
+  100% {
+    bottom: -25%; } }
+@keyframes fragments_animate_2 {
+  0% {
+    bottom: 150%; }
+  100% {
+    bottom: 100%; } }
+@keyframes fragments_animate_1 {
+  0% {
+    bottom: 150%; }
+  100% {
+    bottom: 93%; } }
+@keyframes main_image_animae {
+  0% {
+    transform: scale(0) rotate(45deg); }
+  100% {
+    transform: scale(1) rotate(45deg); } }
+@keyframes content-animate {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+/*# sourceMappingURL=style.css.map */
